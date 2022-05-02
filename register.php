@@ -100,6 +100,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Create Account</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="wrapper">
@@ -107,25 +108,25 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <p>Please fill this form to create an account.</p>
         <form action="<?php echo(htmlspecialchars($_SERVER["PHP_SELF"])); ?>" method="post">
             <div class="form-group">
-                <label>Username</label>
-                <input type="text" name="username" class="form-control <?php echo((!empty($username_err)) ? 'is-invalid' : ''); ?>" value="<?php echo($username); ?>">
-                <br><span class="invalid-feedback"><?php echo($username_err); ?></span>
+                <label>Username</label><br>
+                <input type="text" name="username" class="rgusername" placeholder="Username" class="form-control <?php echo((!empty($username_err)) ? 'is-invalid' : ''); ?>" value="<?php echo($username); ?>">
+                <br><span class="invalid-feedback"><?php echo($username_err); ?></span><br>
             </div>    
             <div class="form-group">
-                <label>Password</label>
-                <input type="password" name="password" class="form-control <?php echo((!empty($password_err)) ? 'is-invalid' : ''); ?>" value="<?php echo($password); ?>">
-                <br><span class="invalid-feedback"><?php echo($password_err); ?></span>
+                <label>Password</label><br>
+                <input type="password" name="password" class="rgpassword" placeholder="Password" class="form-control" <?php echo((!empty($password_err)) ? 'is-invalid' : ''); ?>" value="<?php echo($password); ?>">
+                <br><span class="invalid-feedback"><?php echo($password_err); ?></span><br>
             </div>
             <div class="form-group">
-                <label>Confirm Password</label>
-                <input type="password" name="confirm_password" class="form-control <?php echo((!empty($confirm_password_err)) ? 'is-invalid' : ''); ?>" value="<?php echo($confirm_password); ?>">
-                <br><span class="invalid-feedback"><?php echo($confirm_password_err); ?></span>
+                <label>Confirm Password</label><br>
+                <input type="password" name="confirm_password" id="confirmpass" placeholder="Confirm Password" class="form-control" <?php echo((!empty($confirm_password_err)) ? 'is-invalid' : ''); ?>" value="<?php echo($confirm_password); ?>">
+                <br><span class="invalid-feedback"><?php echo($confirm_password_err); ?></span><br>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Submit">
-                <input type="reset" class="btn btn-secondary ml-2" value="Reset">
-            </div>
-            <p>Already have an account? <a href="login.php">Login here</a>.</p>
+                <input type="submit" class="registerbtn" value="Submit">
+                <input type="reset" class="resetbtn" value="Reset">
+            </div><br>
+            <p class="loginredirect">Already have an account? <a href="login.php">Login here</a>.</p>
         </form>
     </div>    
 </body>

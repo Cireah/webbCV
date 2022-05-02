@@ -1,1 +1,52 @@
-/*stylish*/
+/*css for register.php*/
+.grgusername
+{
+    position: fixed;
+}
+
+.rgpassword
+{
+    position: fixed;
+}
+
+.confirmpassword
+{
+    position: fixed;
+}
+
+.registerbtn
+{
+    position: fixed;
+}
+
+.resetbtn
+{
+    position: fixed;
+    left: 80px;
+}
+
+.loginredirect
+{
+    position: fixed;
+}
+
+/*css for login.php*/
+.loginusername
+{
+    position: fixed;
+}
+
+.loginpass
+{
+    position: fixed;
+}
+
+.loginbtn
+{
+    position: fixed;
+}
+
+.registerredirect
+{
+    position: fixed;
+}
