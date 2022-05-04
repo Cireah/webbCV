@@ -3,10 +3,10 @@
 session_start();
  
 // Check if the user is already logged in, if yes then redirect them to welcome page
-/*if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: index.php");
     exit;
-}*/
+}
  
 // Include config file
 require_once "connect.php";
@@ -96,14 +96,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <ul>
+        <li><a href="index.php" class="active">Home</a></li>
+        <li style="float: right"><a href="login.php">Login</a></li>
+        <li style="float: right"><a href="register.php">Create Account</a></li>
+    </ul>
     <div class="wrapper">
-        <h2>Login</h2>
+        <br><br><h2>Login</h2>
         <p>Please fill in your credentials to login.</p>
 
         <?php 
         if(!empty($login_err)){
             echo '<div class="alert alert-danger">' . $login_err . '</div>';
-        }        
+        }
         ?>
 
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">

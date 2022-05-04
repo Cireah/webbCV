@@ -103,8 +103,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <ul>
+        <li><a href="index.php" class="active">Home</a></li>
+        <li style="float: right"><a href="login.php">Login</a></li>
+        <li style="float: right"><a href="register.php">Create Account</a></li>
+    </ul>
     <div class="wrapper">
-        <h2>Sign Up</h2>
+        <br><br><h2>Sign Up</h2>
         <p>Please fill this form to create an account.</p>
         <form action="<?php echo(htmlspecialchars($_SERVER["PHP_SELF"])); ?>" method="post">
             <div class="form-group">
