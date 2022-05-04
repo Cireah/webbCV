@@ -1,10 +1,6 @@
 <?php
-// Initialize the session
 session_start();
- 
-// Check if the user is logged in, if not then redirect them to login page
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,17 +13,18 @@ session_start();
 <body>
 <ul>
     <li><a href="index.php" class="active">Home</a></li>
-    <li style="float: right"><a href="login.php">Login</a></li>
-    <li style="float: right"><a href="register.php">Create Account</a></li>
-    <li style="float: right"><a href="logout.php">Log out</a></li>
+    <?php if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){ ?>
+        <li style="float: right"><a href="logout.php">Log out</a></li>
+    <?php } else {?>
+        <li style="float: right"><a href="login.php">Login</a></li>
+        <li style="float: right"><a href="register.php">Create Account</a></li>
+    <?php } ?>
 </ul>
     <br>
-    <?php if($_SESSION["loggedin"] == true){ ?>
-        hi
-    <h1 class="my-5">hello <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
-        hi
+    <?php if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){ ?>
+        <h1 class="my-5"> hello <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
     <?php } else {?>
-        :(
+        <h1> hi </h1>
     <?php } ?>
 </body>
 </html>
