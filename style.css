@@ -8,7 +8,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: rgb(0, 0, 0);
   }
   
   li {
@@ -17,53 +17,71 @@ ul {
   
   li a {
     display: block;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
   
   li a:hover {
-    background-color: #111;
+    background-color: rgb(45, 45, 45);
   }
 
   .active {
-    background-color: #04AA6D;
+    background-color: rgb(170, 0, 136)
   }
   .active:hover {
-      background-color: green;
+      background-color: rgb(115, 0, 102);
   }
 
 /*css for register.php*/
-.grgusername
+.rgusername
 {
     position: fixed;
+    left: 43%;
+    padding: 0.5%;
 }
 
 .rgpassword
 {
     position: fixed;
+    left: 43%;
+    padding: 0.5%;
 }
 
-.confirmpassword
+.confirmpass
 {
     position: fixed;
+    left: 43%;
+    padding: 0.5%;
 }
 
 .registerbtn
 {
     position: fixed;
+    left: 43%;
+    padding: 0.5%;
 }
 
 .resetbtn
 {
     position: fixed;
-    left: 80px;
+    left: 50%;
+    padding: 0.5%;
 }
 
 .loginredirect
 {
     position: fixed;
+    left: 43%;
+    padding: 0.5%;
+}
+
+.wrapper
+{
+    text-align: center;
+    position: fixed;
+    left: 43%;
 }
 
 /*css for login.php*/

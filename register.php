@@ -13,8 +13,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
  
     if(empty(trim($_POST["username"]))){
         $username_err = "Please enter a username.";
-    } elseif(!preg_match('/^[a-zA-Z0-9_]+$/', trim($_POST["username"]))){
-        $username_err = "Username can only contain letters, numbers, and underscores.";
     } else{
         $sql = "SELECT id FROM users WHERE username = ?";
         
@@ -142,7 +140,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             <div class="form-group">
                 <label>Confirm Password</label><br>
-                <input type="password" name="confirm_password" id="confirmpass" placeholder="Confirm Password" class="form-control" <?php echo((!empty($confirm_password_err)) ? 'is-invalid' : ''); ?>" value="<?php echo($confirm_password); ?>">
+                <input type="password" name="confirm_password" class="confirmpass" placeholder="Confirm Password" class="form-control" <?php echo((!empty($confirm_password_err)) ? 'is-invalid' : ''); ?>" value="<?php echo($confirm_password); ?>">
                 <br><span class="invalid-feedback"><?php echo($confirm_password_err); ?></span><br>
             </div>
             <div class="form-group">

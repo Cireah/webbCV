@@ -1,7 +1,13 @@
 <?php
 session_start();
-session_unset();
-session_destroy();
-header("location: index.php");
-exit;
+
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true){
+    session_unset();
+    session_destroy();
+    header("location: index.php");
+    exit;
+}
+else{
+    header("location: login.php");
+}
 ?>

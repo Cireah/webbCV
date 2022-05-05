@@ -15,6 +15,7 @@ session_start();
     <li><a href="index.php" class="active">Home</a></li>
     <?php if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){ ?>
         <li style="float: right"><a href="logout.php">Log out</a></li>
+        <li style="float: right"><a href="account.php">Account</a></li>
     <?php } else {?>
         <li style="float: right"><a href="login.php">Login</a></li>
         <li style="float: right"><a href="register.php">Create Account</a></li>
