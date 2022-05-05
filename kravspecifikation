@@ -1,0 +1,38 @@
+Webb CV
+
+Beskrivning
+Programmera och designa ett Webb CV bestående av ett flertal webbsidor för att kunna visa min erfarenhet inom programmering och webbutveckling utan att vara begränsad av ett geografiskt område. 
+
+Syfte
+Syftet med projektet är att utveckla en webbplats som visar mitt CV och mina kunskaper inom webbserverprogrammering och webbutveckling som sedan ska kunna visas för framtida arbetsgivare.
+
+Teknisk beskrivning
+
+Design
+En startsida med en introduktion och länkar till andra sidor. En sida för inloggning och ytterligare en för att skapa ett konto. En sida om mig och en sida om mina projekt. 
+
+Hårdvara
+Server och webbhotell. (webbsupport f.d. binero ), laptopen.
+
+Mjukvara 
+Ett inloggningssystem, kopplad till en databas för att spara användarens uppgifter. Använda sessions för att ändra hemsidan beroende på om man är inloggad eller inte. Göra CSS själv. Databasen är i MySQL och phpMyAdmin används för att administrera den.
+
+All kod skrivs i Visual Studio Code och fokuset kommer att främst ligga på CSS och HTML då jag föredrar front-end över back-end. 
+
+Personer
+Utvecklare: Simon Dagernäs
+
+Placering
+NTI Gymnasiet Örebro (Karlsgatan 30).
+
+Juridik
+Använda bilder som är offentligt tillgängliga eller som jag själv tagit. Hasha lösenord så att inte ens personer som hanterar databasen kan se dem. 
+
+Säkerhet
+Hasha lösenord. Använd _POST istället för _GET för att överföra information. Skydd mot SQL- och JS injections samt CSRF (cross site request forgery).
+
+Tid
+GUI och design: 12h
+Byggande och organisation av databas: 4h
+Kod till databas och inloggningssystem: 12h
+Testning och felsökning: 2h
