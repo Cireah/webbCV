@@ -20,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
  
     // Check if username is empty
     if(empty(trim($_POST["username"]))){
-        $username_err = "Please enter username.";
+        $username_err = "Please enter your username.";
     } else{
         $username = trim($_POST["username"]);
     }
@@ -100,7 +100,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <li style="float: right"><a href="login.php">Login</a></li>
         <li style="float: right"><a href="register.php">Create Account</a></li>
     </ul>
-    <div class="wrapper">
+    <div class="login">
         <br><br><h2>Login</h2>
         <p>Please fill in your credentials to login.</p>
 
@@ -113,17 +113,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group">
                 <label>Username</label><br>
-                <input type="text" name="username" class="loginusername" placeholder="Username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+                <input type="text" name="username" class="loginusername" placeholder="Username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>"><br>
                 <br><span class="invalid-feedback"><?php echo $username_err; ?></span><br>
             </div>
             <div class="form-group">
                 <label>Password</label><br>
-                <input type="password" name="password" class="loginpass" placeholder="Password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
+                <input type="password" name="password" class="loginpass" placeholder="Password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>"><br>
                 <br><span class="invalid-feedback"><?php echo $password_err; ?></span><br>
             </div>
             <div class="form-group">
                 <input type="submit" class="loginbtn" value="Login">
-            </div><br>
+            </div>
             <p class="registerredirect">Don't have an account? <a href="register.php">Sign up now</a>.</p>
         </form>
     </div>

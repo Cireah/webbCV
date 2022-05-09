@@ -1,3 +1,16 @@
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: black;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: black;
+  }
+
 /*css navbar*/
 ul {
     position: fixed;
@@ -9,6 +22,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
   }
   
   li {
@@ -35,72 +49,185 @@ ul {
   }
 
 /*css for register.php*/
+.register
+{
+    text-align: center;
+    top: 10%;
+    position: relative;
+    transform: translate(0%, 10%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .rgusername
 {
-    position: fixed;
-    left: 43%;
+    position: absolute;
     padding: 0.5%;
+    transform: translate(-51%, 0%);
+    border-radius: 8px;
+    background-color: white;
+    border: 2px solid black;
+    transition-duration: 0.4s;
+    font-size: 16px;
+}
+.rgusername:focus
+{
+    background-color: rgb(170, 0, 136);
+    color: white;
 }
 
 .rgpassword
 {
-    position: fixed;
-    left: 43%;
+    position: absolute;
     padding: 0.5%;
+    transform: translate(-51%, 0%);
+    border-radius: 8px;
+    background-color: white;
+    border: 2px solid black;
+    transition-duration: 0.4s;
+    font-size: 16px;
+}
+
+.rgpassword:focus
+{
+    background-color: rgb(170, 0, 136);
+    color: white;
 }
 
 .confirmpass
 {
-    position: fixed;
-    left: 43%;
+    position: absolute;
     padding: 0.5%;
+    transform: translate(-51%, 0%);
+    border-radius: 8px;
+    background-color: white;
+    border: 2px solid black;
+    transition-duration: 0.4s;
+    font-size: 16px;
+}
+
+.confirmpass:focus
+{
+    background-color: rgb(170, 0, 136);
+    color: white;
 }
 
 .registerbtn
 {
-    position: fixed;
-    left: 43%;
-    padding: 0.5%;
+    position: relative;
+    padding: 15px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(170, 0, 136);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px rgb(67, 0, 53);
 }
 
-.resetbtn
+.registerbtn:hover
 {
-    position: fixed;
-    left: 50%;
-    padding: 0.5%;
+    background-color: rgb(115, 0, 102);
+    color: white;
+}
+
+.registerbtn:active
+{
+    background-color: rgb(115, 0, 102);
+    box-shadow: 0 3px rgb(32, 0, 28);
+    transform: translateY(4px);
 }
 
 .loginredirect
 {
-    position: fixed;
-    left: 43%;
+    position: relative;
+    text-align: center;
     padding: 0.5%;
 }
 
-.wrapper
+.errormsg
 {
-    text-align: center;
-    position: fixed;
-    left: 43%;
+    text-decoration-color: red;
 }
 
 /*css for login.php*/
+.login{
+    text-align: center;
+    top: 10%;
+    position: relative;
+    transform: translate(0%, 10%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .loginusername
 {
-    position: fixed;
+    position: absolute;
+    padding: 0.5%;
+    transform: translate(-51%, 0%);
+    border-radius: 8px;
+    background-color: white;
+    border: 2px solid black;
+    transition-duration: 0.4s;
+    font-size: 16px;
+}
+.loginusername:focus
+{
+    background-color: rgb(170, 0, 136);
+    color: white;
 }
 
 .loginpass
 {
-    position: fixed;
+    position: absolute;
+    padding: 0.5%;
+    transform: translate(-51%, 0%);
+    border-radius: 8px;
+    background-color: white;
+    border: 2px solid black;
+    transition-duration: 0.4s;
+    font-size: 16px;
+}
+
+.loginpass:focus
+{
+    background-color: rgb(170, 0, 136);
+    color: white;
 }
 
 .loginbtn
 {
-    position: fixed;
+    position: relative;
+    padding: 15px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(170, 0, 136);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px rgb(67, 0, 53);
+}
+
+.loginbtn:hover
+{
+    background-color: rgb(115, 0, 102);
+    color: white;
+}
+
+.loginbtn:active
+{
+    background-color: rgb(115, 0, 102);
+    box-shadow: 0 3px rgb(32, 0, 28);
+    transform: translateY(4px);
 }
 
 .registerredirect
 {
-    position: fixed;
+    position: relative;
+    text-align: center;
+    padding: 0.5%;
 }
