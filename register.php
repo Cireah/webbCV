@@ -126,7 +126,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </ul>
     <div class="register">
         <br><br><h2>Sign Up</h2>
-        <p>Please fill this form to create an account.</p>
+        <p>Please fill in this form to create an account.</p>
         <form action="<?php echo(htmlspecialchars($_SERVER["PHP_SELF"])); ?>" method="post">
             <div class="form-group">
                 <label>Username</label><br>
@@ -141,13 +141,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="form-group">
                 <label>Confirm Password</label><br>
                 <input type="password" name="confirm_password" class="confirmpass" placeholder="Confirm Password" class="form-control" <?php echo((!empty($confirm_password_err)) ? 'is-invalid' : ''); ?>" value="<?php echo($confirm_password); ?>"><br>
-                <br><span class="errormsg" class="invalid-feedback"><?php echo($confirm_password_err); ?></span><br>
+                <br><span class="invalid-feedback" class="errormsg"><?php echo($confirm_password_err); ?></span><br>
             </div>
             <div class="form-group">
                 <input type="submit" class="registerbtn" value="Create account">
             </div>
             <p class="loginredirect">Already have an account? <a href="login.php">Login here</a>.</p>
-        </form>
-    </div>    
+        </form>   
+    </div>
+    <div class="square"></div> 
 </body>
 </html>
