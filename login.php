@@ -95,6 +95,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="loginsquare"></div> 
     <ul>
         <li><a href="index.php" class="active">Home</a></li>
         <li style="float: right"><a href="login.php">Login</a></li>

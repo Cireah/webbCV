@@ -119,6 +119,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="registersquare"></div> 
     <ul>
         <li><a href="index.php" class="active">Home</a></li>
         <li style="float: right"><a href="login.php">Login</a></li>
@@ -149,6 +150,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <p class="loginredirect">Already have an account? <a href="login.php">Login here</a>.</p>
         </form>   
     </div>
-    <div class="square"></div> 
 </body>
 </html>
