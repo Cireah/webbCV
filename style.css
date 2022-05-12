@@ -1,8 +1,8 @@
 body {
-    background-image: url('ezgif-5-b6ee446a35.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -17,6 +17,8 @@ body {
   ::-ms-input-placeholder { /* Microsoft Edge */
     color: black;
   }
+
+/*background-image: linear-gradient(pink, white);*/
 
 /*css navbar*/
 ul {
@@ -33,31 +35,35 @@ ul {
     z-index: 1;
     
   }
-  
-  li {
+
+.active {
+    background-color: rgb(170, 0, 136);
+    z-index: 1;
+}
+.active:hover {
+    background-color: rgb(115, 0, 102);
+    z-index: 1;
+}
+
+li {
     float: left;
-  }
-  
-  li a {
+    background-image: linear-gradient(rgb(170, 0, 136), pink);
+}
+
+li a {
     display: block;
     color: rgb(255, 255, 255);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
-  
-  li a:hover {
+    z-index: -1;
+}
+
+li a:hover {
     background-color: rgb(45, 45, 45);
-  }
+}
 
-  .active {
-    background-color: rgb(170, 0, 136)
-  }
-  .active:hover {
-      background-color: rgb(115, 0, 102);
-  }
-
-/*css for register.php*/
+  /*css for register.php*/
 .register
 {
     text-align: center;
@@ -74,14 +80,15 @@ ul {
     transform: translate(-51%, 0%);
     border-radius: 8px;
     background-color: white;
-    border: 2px solid black;
+    border: 2px solid white;
     transition-duration: 0.4s;
     font-size: 16px;
 }
 .rgusername:focus
 {
     background-color: rgb(170, 0, 136);
-    color: white;
+    border: 2px solid rgb(170, 0, 136);
+    outline: none;
 }
 
 .rgpassword
@@ -91,7 +98,7 @@ ul {
     transform: translate(-51%, 0%);
     border-radius: 8px;
     background-color: white;
-    border: 2px solid black;
+    border: 2px solid white;
     transition-duration: 0.4s;
     font-size: 16px;
 }
@@ -99,7 +106,8 @@ ul {
 .rgpassword:focus
 {
     background-color: rgb(170, 0, 136);
-    color: white;
+    border: 2px solid rgb(170, 0, 136);
+    outline: none;
 }
 
 .confirmpass
@@ -109,7 +117,7 @@ ul {
     transform: translate(-51%, 0%);
     border-radius: 8px;
     background-color: white;
-    border: 2px solid black;
+    border: 2px solid white;
     transition-duration: 0.4s;
     font-size: 16px;
 }
@@ -117,7 +125,8 @@ ul {
 .confirmpass:focus
 {
     background-color: rgb(170, 0, 136);
-    color: white;
+    border: 2px solid rgb(170, 0, 136);
+    outline: none;
 }
 
 .registerbtn
@@ -171,14 +180,15 @@ ul {
     transform: translate(-51%, 0%);
     border-radius: 8px;
     background-color: white;
-    border: 2px solid black;
+    border: 2px solid white;
     transition-duration: 0.4s;
     font-size: 16px;
 }
 .loginusername:focus
 {
     background-color: rgb(170, 0, 136);
-    color: white;
+    border: 2px solid rgb(170, 0, 136);
+    outline: none;
 }
 
 .loginpass
@@ -188,7 +198,7 @@ ul {
     transform: translate(-51%, 0%);
     border-radius: 8px;
     background-color: white;
-    border: 2px solid black;
+    border: 2px solid white;
     transition-duration: 0.4s;
     font-size: 16px;
 }
@@ -196,7 +206,8 @@ ul {
 .loginpass:focus
 {
     background-color: rgb(170, 0, 136);
-    color: white;
+    border: 2px solid rgb(170, 0, 136);
+    outline: none;
 }
 
 .loginbtn
@@ -247,12 +258,11 @@ ul {
     position: absolute;
     overflow: hidden;
     padding: 150px;
-    width: 300px;
-    height: 200px;
+    width: 80px;
+    height: 150px;
     background: pink;
     border-radius: 10px;
-    z-index:-1;
-    width: 100px; 
+    z-index:-1; 
     left: 50%; 
     transform: translate(-50%, 20%); 
 }
@@ -262,12 +272,11 @@ ul {
     position: absolute;
     overflow: hidden;
     padding: 150px;
-    width: 300px;
-    height: 130px;
+    width: 80px;
+    height: 90px;
     background: pink;
     border-radius: 10px;
     z-index:-1;
-    width: 100px; 
     left: 50%; 
     transform: translate(-50%, 20%); 
 }

@@ -13,6 +13,7 @@ session_start();
 <body>
 <ul>
     <li><a href="index.php" class="active">Home</a></li>
+    <li><a href="aboutme.php">About me</a></li>
     <?php if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){ ?>
         <li style="float: right"><a href="logout.php">Log out</a></li>
         <li style="float: right"><a href="account.php">Account</a></li>

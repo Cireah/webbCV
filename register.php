@@ -121,26 +121,29 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <body>
 <div class="registersquare"></div> 
     <ul>
-        <li><a href="index.php" class="active">Home</a></li>
-        <li style="float: right"><a href="login.php">Login</a></li>
-        <li style="float: right"><a href="register.php">Create Account</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="aboutme.php">About me</a></li>
+        <?php if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){ ?>
+            <li style="float: right"><a href="logout.php">Log out</a></li>
+            <li style="float: right"><a href="account.php">Account</a></li>
+        <?php } else {?>
+            <li style="float: right"><a href="login.php">Login</a></li>
+            <li class="active" style="float: right"><a href="register.php">Create Account</a></li>
+        <?php } ?>
     </ul>
     <div class="register">
         <br><br><h2>Sign Up</h2>
         <p>Please fill in this form to create an account.</p>
         <form action="<?php echo(htmlspecialchars($_SERVER["PHP_SELF"])); ?>" method="post">
             <div class="form-group">
-                <label>Username</label><br>
                 <input type="text" name="username" class="rgusername" placeholder="Username" class="form-control <?php echo((!empty($username_err)) ? 'is-invalid' : ''); ?>" value="<?php echo($username); ?>"><br>
                 <br><span class="invalid-feedback"><?php echo($username_err); ?></span><br>
             </div>    
             <div class="form-group">
-                <label>Password</label><br>
                 <input type="password" name="password" class="rgpassword" placeholder="Password" class="form-control" <?php echo((!empty($password_err)) ? 'is-invalid' : ''); ?>" value="<?php echo($password); ?>"><br>
                 <br><span class="invalid-feedback"><?php echo($password_err); ?></span><br>
             </div>
             <div class="form-group">
-                <label>Confirm Password</label><br>
                 <input type="password" name="confirm_password" class="confirmpass" placeholder="Confirm Password" class="form-control" <?php echo((!empty($confirm_password_err)) ? 'is-invalid' : ''); ?>" value="<?php echo($confirm_password); ?>"><br>
                 <br><span class="invalid-feedback" class="errormsg"><?php echo($confirm_password_err); ?></span><br>
             </div>
