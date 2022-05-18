@@ -10,6 +10,9 @@ session_start();
     <title>Webb CV</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<header>
+    <h1>hello</h1>
+</header>
 <body>
 <ul>
     <li><a href="index.php" class="active">Home</a></li>
@@ -18,8 +21,8 @@ session_start();
         <li style="float: right"><a href="logout.php">Log out</a></li>
         <li style="float: right"><a href="account.php">Account</a></li>
     <?php } else {?>
-        <li style="float: right"><a href="login.php">Login</a></li>
-        <li style="float: right"><a href="register.php">Create Account</a></li>
+        <li style="float: right"><a href="login.php">Sign in</a></li>
+        <li style="float: right"><a href="register.php">Sign up</a></li>
     <?php } ?>
 </ul>
     <br>
@@ -27,6 +30,8 @@ session_start();
         <h1 class="my-5"> hello <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
     <?php } else {?>
         <h1> hi </h1>
-    <?php } ?>
+        <div class="text">Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus. Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus. Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus. Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus. Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus. Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus. Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+    </div>
+        <?php } ?>
 </body>
 </html>

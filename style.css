@@ -1,56 +1,64 @@
-body {
+body,html 
+{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
+    padding: 0; 
+    margin: 0; 
+    scroll-behavior: smooth; 
   }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder 
+{ /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: black;
     opacity: 1; /* Firefox */
   }
   
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  :-ms-input-placeholder 
+  { /* Internet Explorer 10-11 */
     color: black;
   }
   
-  ::-ms-input-placeholder { /* Microsoft Edge */
+  ::-ms-input-placeholder 
+  { /* Microsoft Edge */
     color: black;
   }
 
-/*background-image: linear-gradient(pink, white);*/
-
 /*css navbar*/
-ul {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
+  
+ul 
+{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(0, 0, 0);
-    font-family: Arial, Helvetica, sans-serif;
-    z-index: 1;
-    
-  }
-
-.active {
-    background-color: rgb(170, 0, 136);
-    z-index: 1;
-}
-.active:hover {
-    background-color: rgb(115, 0, 102);
-    z-index: 1;
+    background-image: linear-gradient(plum, rgba(255, 255, 255, 0));
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%; max-width: 100%;
 }
 
-li {
+.active 
+{
+    background-image: linear-gradient(rgb(115, 0, 102), plum);
+    z-index: 1;
+}
+.active:hover 
+{
+    background-image: linear-gradient(rgb(79, 0, 70), plum);
+    z-index: 1;
+}
+
+li 
+{
+    background-image: linear-gradient(rgb(170, 0, 136), plum);
     float: left;
-    background-image: linear-gradient(rgb(170, 0, 136), pink);
 }
 
-li a {
+li a 
+{
     display: block;
     color: rgb(255, 255, 255);
     text-align: center;
@@ -59,8 +67,9 @@ li a {
     z-index: -1;
 }
 
-li a:hover {
-    background-color: rgb(45, 45, 45);
+li a:hover 
+{
+    background-image: linear-gradient(rgb(115, 0, 102), plum);
 }
 
   /*css for register.php*/
@@ -86,7 +95,6 @@ li a:hover {
 }
 .rgusername:focus
 {
-    background-color: rgb(170, 0, 136);
     border: 2px solid rgb(170, 0, 136);
     outline: none;
 }
@@ -105,7 +113,6 @@ li a:hover {
 
 .rgpassword:focus
 {
-    background-color: rgb(170, 0, 136);
     border: 2px solid rgb(170, 0, 136);
     outline: none;
 }
@@ -124,7 +131,6 @@ li a:hover {
 
 .confirmpass:focus
 {
-    background-color: rgb(170, 0, 136);
     border: 2px solid rgb(170, 0, 136);
     outline: none;
 }
@@ -184,9 +190,9 @@ li a:hover {
     transition-duration: 0.4s;
     font-size: 16px;
 }
+
 .loginusername:focus
 {
-    background-color: rgb(170, 0, 136);
     border: 2px solid rgb(170, 0, 136);
     outline: none;
 }
@@ -205,7 +211,6 @@ li a:hover {
 
 .loginpass:focus
 {
-    background-color: rgb(170, 0, 136);
     border: 2px solid rgb(170, 0, 136);
     outline: none;
 }
@@ -260,7 +265,7 @@ li a:hover {
     padding: 150px;
     width: 80px;
     height: 150px;
-    background: pink;
+    background: plum;
     border-radius: 10px;
     z-index:-1; 
     left: 50%; 
@@ -274,9 +279,14 @@ li a:hover {
     padding: 150px;
     width: 80px;
     height: 90px;
-    background: pink;
+    background: plum;
     border-radius: 10px;
     z-index:-1;
     left: 50%; 
     transform: translate(-50%, 20%); 
+}
+
+.text
+{
+    font-size: 100px;
 }

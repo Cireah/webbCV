@@ -108,7 +108,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <?php } ?>
     </ul>
     <div class="login">
-        <br><br><h2>Login</h2>
+        <h2>Sign in</h2>
         <p>Please fill in your credentials to login.</p>
 
         <?php 

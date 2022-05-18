@@ -132,7 +132,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <?php } ?>
     </ul>
     <div class="register">
-        <br><br><h2>Sign Up</h2>
+        <h2>Sign Up</h2>
         <p>Please fill in this form to create an account.</p>
         <form action="<?php echo(htmlspecialchars($_SERVER["PHP_SELF"])); ?>" method="post">
             <div class="form-group">
