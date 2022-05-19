@@ -1,5 +1,6 @@
 <?php
 session_start();
+$con = mysqli_connect("localhost:8111", "root", "", "accounts");
 
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true){ ?>
 
@@ -13,7 +14,8 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true){ ?>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>hello</h1>
+        <div class="accountsquare1"></div>
+        <div class="accountsquare2"></div>  
     <ul>
         <li><a href="index.php">Home</a></li>
         <li><a href="aboutme.php">About me</a></li>
@@ -25,11 +27,18 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true){ ?>
         <li style="float: right"><a href="register.php">Create Account</a></li>
         <?php } ?>
     </ul>
+    <div class="accountinfo">
+        Username: <b><?php echo htmlspecialchars($_SESSION["username"]);?></b><br>
+        Creation date: <?php $username = $_SESSION["username"];
+        $sql = "SELECT `creation date` FROM `users` WHERE `username`= $username"; 
+        $res = mysqli_query($con, $sql);
+        echo($res);
+    ?>
+    </div>
     </body>
     </html>
-
-    <?php
-    exit;}
+<?php
+exit;}
 
 else{
     header("location: index.php");

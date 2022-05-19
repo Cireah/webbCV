@@ -286,7 +286,30 @@ li a:hover
     transform: translate(-50%, 20%); 
 }
 
-.text
+.accountsquare1
 {
-    font-size: 100px;
+    position: absolute;
+    overflow: hidden;
+    padding: 150px;
+    width: 80px;
+    height: 90px;
+    background: plum;
+    border-radius: 10px;
+    z-index:-1;
+    left: 50%; 
+    transform: translate(20%, 40%); 
+}
+
+.accountsquare2
+{
+    position: absolute;
+    overflow: hidden;
+    padding: 150px;
+    width: 80px;
+    height: 90px;
+    background: plum;
+    border-radius: 10px;
+    z-index:-1;
+    left: 50%; 
+    transform: translate(-120%, 40%); 
 }
