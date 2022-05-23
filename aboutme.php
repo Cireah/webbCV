@@ -23,5 +23,6 @@ session_start();
             <li style="float: right"><a href="register.php">Create Account</a></li>
         <?php } ?>
     </ul>
+    hi i do stuff <!-- input links to github projects-->
 </body>
 </html>
