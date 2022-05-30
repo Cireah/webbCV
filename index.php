@@ -11,13 +11,14 @@ session_start();
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<a name="home"></a>
+<a name="top"></a>
 <div class="header">
     <div class="headerimage">
     </div>
+
 </div>
 <ul>
-    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#top" class="active">Home</a></li>
     <li><a href="aboutme.php">About me</a></li>
     <?php if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){ ?>
         <li style="float: right"><a href="logout.php">Log out</a></li>

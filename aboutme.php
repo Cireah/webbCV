@@ -12,17 +12,20 @@ session_start();
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a name="top"></a>
     <ul>
         <li><a href="index.php">Home</a></li>
-        <li><a class="active" href="aboutme.php">About me</a></li>
+        <li><a href="#top" class="active">About me</a></li>
         <?php if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){ ?>
             <li style="float: right"><a href="logout.php">Log out</a></li>
             <li style="float: right"><a href="account.php">Account</a></li>
         <?php } else {?>
-            <li style="float: right"><a href="login.php">Login</a></li>
+            <li style="float: right"><a href="login.php">Log in</a></li>
             <li style="float: right"><a href="register.php">Create Account</a></li>
         <?php } ?>
     </ul>
-    hi i do stuff <!-- input links to github projects-->
+    hi i do stuff <!-- input links to github projects--><br>
+    slideshow or normal scroll??????????
+    <a class="projectlink" href="https://github.com/simpan824/albumsDbProject" target="_blank">database thingy</a>
 </body>
 </html>
