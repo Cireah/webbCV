@@ -303,7 +303,7 @@ li a:hover
     transform: translate(-50%, 23%); 
 }
 
-.accountsquare1
+.aboutsquare1
 {
     position: absolute;
     overflow: hidden;
@@ -317,7 +317,7 @@ li a:hover
     transform: translate(20%, 40%); 
 }
 
-.accountsquare2
+.aboutsquare2
 {
     position: absolute;
     overflow: hidden;

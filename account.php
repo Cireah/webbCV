@@ -11,9 +11,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true){ ?>
         <title>Account</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-        <div class="accountsquare1"></div>
-        <div class="accountsquare2"></div>  
+    <body> 
     <ul>
         <li><a href="index.php">Home</a></li>
         <li><a href="aboutme.php">About me</a></li>
@@ -27,7 +25,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true){ ?>
     </ul>
     <div class="accountinfo">
         Username: <b><?php echo htmlspecialchars($_SESSION["username"]);?></b><br>
-        
+
 <?php exit;}
 
 else{

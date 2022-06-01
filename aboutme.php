@@ -12,6 +12,8 @@ session_start();
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="aboutsquare1"></div>
+    <div class="aboutsquare2"></div> 
 <a name="top"></a>
     <ul>
         <li><a href="index.php">Home</a></li>
