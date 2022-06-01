@@ -27,8 +27,8 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true){ ?>
     </ul>
     <div class="accountinfo">
         Username: <b><?php echo htmlspecialchars($_SESSION["username"]);?></b><br>
-        Creation date: <?php $username = $_SESSION["username"];
-exit;}
+        
+<?php exit;}
 
 else{
     header("location: index.php");
