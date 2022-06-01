@@ -25,7 +25,7 @@ session_start();
         <?php } ?>
     </ul>
     hi i do stuff <!-- input links to github projects--><br>
-    slideshow or normal scroll??????????
+    <!-- slideshow or normal scroll?????????? -->
     <a class="projectlink" href="https://github.com/simpan824/albumsDbProject" target="_blank">database thingy</a>
 </body>
 </html>

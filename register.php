@@ -5,12 +5,11 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true){
     exit;
 }
 require_once "connect.php";
- 
+
 $username = $password = $confirm_password = "";
 $username_err = $password_err = $confirm_password_err = "";
- 
+
 if($_SERVER["REQUEST_METHOD"] == "POST"){
- 
     if(empty(trim($_POST["username"]))){
         $username_err = "Please enter a username.";
     } else{
@@ -36,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             mysqli_stmt_close($stmt);
         }
     }
-    
+
     if(empty(trim($_POST["password"]))){
         $password_err = "Please enter a password.";     
     } elseif(strlen(trim($_POST["password"])) < 6){
@@ -44,7 +43,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     } else{
         $password = trim($_POST["password"]);
     }
-    
+
     if(empty(trim($_POST["confirm_password"]))){
         $confirm_password_err = "Please confirm the password.";     
     } else{
@@ -98,7 +97,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         }
                         mysqli_stmt_close($stmt);
                     }
-                header("location: login.php");
+                header("location: index.php");
             } else{
                 echo("Something went wrong. Please try again later.");
             }

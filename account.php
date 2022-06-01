@@ -1,6 +1,5 @@
 <?php
 session_start();
-$conn = mysqli_connect("localhost:8111", "root", "", "accounts");
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true){ ?>
 
     <!DOCTYPE html>
@@ -28,7 +27,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true){ ?>
     </ul>
     <div class="accountinfo">
         Username: <b><?php echo htmlspecialchars($_SESSION["username"]);?></b><br>
-        Creation date: <?php $username = $_SESSION["username"]; /*i give up on trying to input date ill do it if i have time left*/
+        Creation date: <?php $username = $_SESSION["username"];
 exit;}
 
 else{
